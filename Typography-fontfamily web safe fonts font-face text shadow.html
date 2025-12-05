@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typography Demo</title>
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f4f4f4;
+    color: #333;
+  }
+
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  section {
+    margin-bottom: 50px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  /* Typography Best Practices */
+  .typography-best p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .typography-best h3 {
+    font-size: 24px;
+    margin-top: 15px;
+  }
+
+  /* Font Families */
+  .font-families p {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  .arial { font-family: Arial, sans-serif; }
+  .roboto { font-family: 'Roboto', sans-serif; }
+  .times { font-family: 'Times New Roman', serif; }
+
+  /* Web Safe Fonts */
+  .web-safe p {
+    font-size: 18px;
+    margin: 8px 0;
+  }
+  .verdana { font-family: Verdana, sans-serif; }
+  .georgia { font-family: Georgia, serif; }
+  .trebuchet { font-family: "Trebuchet MS", sans-serif; }
+
+  /* @font-face Custom Font */
+  @font-face {
+    font-family: "CustomFont";
+    src: url("https://fonts.gstatic.com/s/lobster/v23/neILzCirqoswsqX9zoKmMw.woff2") format("woff2");
+  }
+  .custom-font {
+    font-family: "CustomFont", cursive;
+    font-size: 28px;
+  }
+
+  /* Text Shadow */
+  .text-shadow p {
+    font-size: 28px;
+    margin: 10px 0;
+  }
+  .shadow1 { text-shadow: 3px 2px #00ffc3; }
+  .shadow2 { text-shadow: 3px 2px 5px #0077ff; }
+  .shadow3 { text-shadow: 3px 2px 5px #0077ff, -3px -2px 3px #ff6600, 5px 4px 5px #dee7e5; }
+
+  /* External Google Fonts */
+  .google-fonts p {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 0;
+  }
+  .google-light { font-weight: 300; }
+  .google-regular { font-weight: 400; }
+  .google-bold { font-weight: 700; }
+</style>
+
+</head>
+<body>
+
+<h1>Typography Demo</h1>
+
+<section class="typography-best">
+  <h2>Best Practices in Typography</h2>
+  <p>Use readable fonts, consistent spacing, and proper font hierarchy. This paragraph uses Open Sans for clarity and comfortable reading. Line-height and font size are optimized for readability.</p>
+  <h3>Heading Example</h3>
+  <p>Headings should be clearly larger than body text for hierarchy.</p>
+</section>
+
+<section class="font-families">
+  <h2>Font Families</h2>
+  <p class="arial">This text uses Arial, a sans-serif font.</p>
+  <p class="roboto">This text uses Roboto, a Google font.</p>
+  <p class="times">This text uses Times New Roman, a serif font.</p>
+</section>
+
+<section class="web-safe">
+  <h2>Web Safe Fonts</h2>
+  <p class="verdana">This text uses Verdana, a web-safe sans-serif font.</p>
+  <p class="georgia">This text uses Georgia, a web-safe serif font.</p>
+  <p class="trebuchet">This text uses Trebuchet MS, another web-safe sans-serif font.</p>
+</section>
+
+<section class="custom-font">
+  <h2>@font-face Custom Font</h2>
+  <p>This text uses a custom font loaded via @font-face.</p>
+</section>
+
+<section class="google-fonts">
+  <h2>External Fonts (Google Fonts)</h2>
+  <p class="google-light">Roboto Light (300)</p>
+  <p class="google-regular">Roboto Regular (400)</p>
+  <p class="google-bold">Roboto Bold (700)</p>
+</section>
+
+<section class="text-shadow">
+  <h2>Text Shadow Examples</h2>
+  <p class="shadow1">Simple Shadow</p>
+  <p class="shadow2">Shadow with Blur</p>
+  <p class="shadow3">Multiple Layered Shadows</p>
+</section>
+
+</body>
+</html>
