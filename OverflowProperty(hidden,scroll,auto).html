@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Overflow Demo</title>
+<style>
+  .container {
+    width: 300px;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    padding: 10px;
+  }
+  .hidden { overflow: hidden; }
+  .scroll { overflow: scroll; }
+  .auto { overflow: auto; }
+</style>
+</head>
+<body>
+<h2>Overflow Property Demo</h2>
+
+<div class="container hidden">
+  <p>Hidden: Extra content will be cut off. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+<div class="container scroll">
+  <p>Scroll: Extra content can be scrolled. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+<div class="container auto">
+  <p>Auto: Scrollbars appear only when needed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+</body>
+</html>

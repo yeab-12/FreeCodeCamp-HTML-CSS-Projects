@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.box {
+  width: 100%;
+  height: 200px;
+  border: 2px solid #000;
+  margin-bottom: 30px;
+  background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 4px black;
+}
+
+/* 1. contain + no-repeat */
+.contain-no-repeat {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 2. cover + fixed */
+.cover-fixed {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* 3. repeat-x */
+.repeat-x {
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+/* 4. positioned */
+.positioned {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+}

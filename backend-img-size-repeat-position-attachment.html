@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--1. background-size
+Controls how big the background image appears.
+contain — fits the entire image without cropping
+cover — fills the whole element, may crop
+auto — original size
+100% 100% — stretch to fit
+✔ 2. background-repeat
+Controls how the image repeats:
+repeat (default) — repeats in all directions
+no-repeat — shows the image once
+repeat-x — repeat horizontally
+repeat-y — repeat vertically
+✔ 3. background-position
+Controls where the image appears.
+Examples:
+center
+left top
+right bottom
+50% 50%
+20px 30px
+✔ 4. background-attachment
+Controls scrolling behavior:
+scroll — background moves with page
+fixed — background stays in place
+local — moves with the element’s content-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Property Demo</title>
+  <link rel="stylesheet" href="backend-img-size-repeat-position-attachment.css">
+</head>
+<body>
+
+<h1>Background Image Demo</h1>
+
+<div class="box contain-no-repeat">
+  <p>background-size: contain; background-repeat: no-repeat;</p>
+</div>
+
+<div class="box cover-fixed">
+  <p>background-size: cover; background-attachment: fixed;</p>
+</div>
+
+<div class="box repeat-x">
+  <p>background-repeat: repeat-x;</p>
+</div>
+
+<div class="box positioned">
+  <p>background-position: center top;</p>
+</div>
+
+</body>
+</html>

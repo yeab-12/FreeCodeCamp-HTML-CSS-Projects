@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .linear-gradient {
+      background: linear-gradient(to right, red, yellow);
+      height: 40vh;
+      margin-bottom: 20px;
+    }
+
+    .radial-gradient {
+      background: radial-gradient(circle closest-side at center, red, yellow 50%, green);
+      height: 60vh;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Linear Gradient Example</h2>
+<div class="linear-gradient"></div>
+
+<h2>Radial Gradient Example</h2>
+<div class="radial-gradient"></div>
+
+</body>
+</html>
+<!--🎨 1. Linear Gradient
+A linear gradient transitions colors in a straight line.
+✔ Syntax
+background: linear-gradient(direction, color1, color2, ...);
+✔ Explanation
+direction → controls where the gradient flows (e.g., to right, to bottom, 45deg)
+color stops → the colors included in the gradient
+✔ Example
+HTML
+<div class="linear-gradient"></div>
+CSS
+.linear-gradient {
+  background: linear-gradient(to right, red, yellow);
+  height: 40vh;
+}
+This creates a gradient that moves:
+from red → on the left
+to yellow → on the right
+🎨 2. Radial Gradient
+A radial gradient transitions colors outward from a center point, forming a circle or ellipse.
+✔ Syntax
+background: radial-gradient(shape size at position, color1, color2, ...);
+✔ Explanatiom
+shape → circle or ellipse
+size → closest-side, farthest-corner, etc.
+position → center, top left, 50% 50%
+color stops → the colors and their transition points-->

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Example</title>
+  <style>
+    body {
+      background-color: #f0f0f0; /* Light mode background */
+      color: #111;               /* Light mode text */
+      font-family: sans-serif;
+      padding: 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      transition: background 0.3s, color 0.3s;
+      border: none;
+    }
+
+    .buttons button.saturated {
+      background-color: #ff00ff; /* Highly saturated */
+      color: white;
+    }
+
+    .buttons button.desaturated {
+      background-color: #925f88; /* Softer, desaturated */
+      color: white;
+    }
+
+    .dark-mode-examples {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      padding: 1rem;
+      border-radius: 8px;
+      width: 300px;
+      transition: background 0.3s, color 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .box.harsh-dark {
+      background-color: #000; 
+      color: #fff;
+    }
+
+    .box.soft-dark {
+      background-color: #1e1e1e; 
+      color: #cccccc;
+    }
+
+    /* Dark mode toggle styles */
+    body.dark {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    body.dark .saturated {
+      background-color: #ff00ff; 
+      color: black;
+    }
+
+    body.dark .desaturated {
+      background-color: #925f88; 
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button id="theme-toggle">Toggle Dark Mode</button>
+
+  <h1>Dark Mode Examples</h1>
+
+  <div class="buttons">
+    <button class="saturated">Saturated Button</button>
+    <button class="desaturated">Desaturated Button</button>
+  </div>
+
+  <div class="dark-mode-examples">
+    <div class="box harsh-dark">
+      <h2>High Contrast</h2>
+      <p>Pure black background with white text. Harsh on the eyes.</p>
+    </div>
+    <div class="box soft-dark">
+      <h2>Soft Contrast</h2>
+      <p>Dark gray background with light gray text. Comfortable for reading.</p>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+          </p>
+        </article>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Feel free to reach out to me at

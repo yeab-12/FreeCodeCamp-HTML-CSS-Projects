@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Scroll Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 1rem;
+  }
+
+  .infinite-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .post {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+
+  .loading-indicator {
+    text-align: center;
+    font-weight: bold;
+    margin: 12px 0;
+    display: none;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .back-to-top:hover {
+    background-color: #0056b3;
+  }
+
+  .load-more {
+    padding: 10px 20px;
+    margin: 12px 0;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .load-more:hover {
+    background-color: #218838;
+  }
+</style>
+</head>
+<body>
+
+<div class="infinite-scroll" id="scroll-container">
+  <div class="post">Post 1</div>
+  <div class="post">Post 2</div>
+  <div class="post">Post 3</div>
+</div>
+
+<div class="loading-indicator" id="loading">Loading...</div>
+<button class="load-more" id="load-more-btn">Load More</button>
+<button class="back-to-top" id="back-to-top">↑ Back to Top</button>
+
+<script>
+const container = document.getElementById('scroll-container');
+const loadMoreBtn = document.getElementById('load-more-btn');
+const loadingIndicator = document.getElementById('loading');
+const backToTopBtn = document.getElementById('back-to-top');
+
+function loadMorePosts(count = 3) {
+  loadingIndicator.style.display = 'block';
+  setTimeout(() => {
+    for (let i = 0; i < count; i++) {
+      const post = document.createElement('div');
+      post.className = 'post';
+      post.textContent = `Post ${container.children.length + 1}`;
+      container.appendChild(post);
+    }
+    loadingIndicator.style.display = 'none';
+  }, 800);
+}
+
+// Load more on button click
+loadMoreBtn.addEventListener('click', () => loadMorePosts());
+
+// Show back-to-top button after scrolling
+window.addEventListener('scroll', () => {
+  backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+
+// Smooth scroll back to top
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Optional: infinite scroll when reaching bottom
+window.addEventListener('scroll', () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    loadMorePosts();
+  }
+});
+</script>
+
+</body>
+</html>

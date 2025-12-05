@@ -1,0 +1,40 @@
+/* 1. DEFAULT LINK STYLES (browser default recreated) */
+a:link {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+}
+
+/* Hover and active give interaction feedback */
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: darkorange;
+}
+
+/* 2. CUSTOM ACCESSIBLE LINK STYLE */
+a.custom:link {
+  color: blue;
+  text-decoration: none;
+  border-bottom: 2px solid blue;
+}
+
+a.custom:visited {
+  color: purple;
+  border-bottom: 2px solid purple;
+}
+
+a.custom:hover {
+  color: red;
+  border-bottom-color: red;
+}
+
+a.custom:active {
+  color: darkorange;
+  border-bottom-color: darkorange;
+}

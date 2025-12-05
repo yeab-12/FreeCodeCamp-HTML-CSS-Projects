@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia Player</title>
+</head>
+
+<body>
+  <h1>My Multimedia Player</h1>
+  <section>
+    <h2>Sailing Away<h2>
+      <audio controls aria-label="Audio track:Sailing Away">
+        <source src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3" type="audio/mpeg">
+        </audio>
+  </section>
+  <section>
+    <h2>Map Method Explained</h2>
+    <video controls width="600"  aria-label="Video lesson on how the map works">
+      <source src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4" type="video/mp4">
+    <track
+    src="subtitles.vtt" kind="subtitles" srclang="en" label="English Subtitles"/>
+    </video>
+  </section>
+  <section>
+    <h2>Transcript</h2>
+    <p>The map() method creates a new arrray by applying a function to each of an existing array...</p>
+  </section>
+  <br /><br /><br /><br />
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Multimedia Player</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a cleaner look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+            color: #1f2937;
+        }
+        /* Style for media players */
+        audio, video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <!-- 1 & 2. Main Title -->
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-center text-indigo-700 mb-10 tracking-tight">
+        Multi-Track Media Center
+    </h1>
+
+    <div class="max-w-4xl mx-auto space-y-12">
+        
+        <!-- 3. First Section: Audio Player -->
+        <section class="bg-white p-6 rounded-xl shadow-lg border border-indigo-100">
+            <!-- 4 & 5. Audio Title -->
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2 text-indigo-600">
+                Featured Audio: Sailing Away
+            </h2>
+            
+            <!-- 6, 7 & 8. Audio Element with Controls and Aria-Label -->
+            <audio controls aria-label="A calm instrumental track titled Sailing Away">
+                <!-- 9, 10 & 11. Source Element -->
+                <source src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- 3. Second Section: Video Player -->
+        <section class="bg-white p-6 rounded-xl shadow-lg border border-indigo-100">
+            <!-- 12 & 13. Video Title -->
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2 text-indigo-600">
+                Instructional Video: The JavaScript Map Method
+            </h2>
+
+            <!-- 14, 15, 16 & 17. Video Element with Controls, Width, and Aria-Label -->
+            <video controls width="600" aria-label="A programming tutorial explaining how the JavaScript map method works">
+                <!-- 18 & 19. Source Element -->
+                <source src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4" type="video/mp4">
+                
+                <!-- 20, 21, 22, 23 & 24. Track Element for Subtitles -->
+                <!-- NOTE: The VTT file path is a placeholder as the content is not provided -->
+                <track
+                    src="video-subtitles.vtt" 
+                    kind="subtitles"
+                    srclang="en"
+                    label="English Subtitles"
+                />
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- 3. Third Section: Transcript -->
+        <section class="bg-white p-6 rounded-xl shadow-lg border border-indigo-100">
+            <!-- 25 & 26. Transcript Title -->
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2 text-indigo-600">
+                Full Video Transcript
+            </h2>
+
+            <!-- 27. Transcript Paragraph -->
+            <p class="text-gray-700 leading-relaxed text-base">
+                [Host]: Hello, and welcome to this quick tutorial on one of the most useful array methods in JavaScript: the `map()` method. The `map()` method creates a new array populated with the results of calling a provided function on every element in the calling array. It's fantastic because it doesn't mutate the original array. For example, if you have an array of numbers and you want to double each one, you simply call `.map()` and pass in a function that returns `element * 2`. The result is a clean, new array with all the doubled values. It's an essential tool for functional programming in JavaScript, making your code cleaner and easier to read.
+            </p>
+        </section>
+    </div>
+
+</body>
+</html>

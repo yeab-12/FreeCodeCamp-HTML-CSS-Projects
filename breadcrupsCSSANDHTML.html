@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breadcrumb Example</title>
+  <style>
+    /* Main navigation */
+    .main-nav {
+      background-color: #333;
+      padding: 1rem;
+    }
+
+    .main-nav a {
+      color: white;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.9rem; /* readable but subtle */
+      color: #555;       /* secondary text color */
+      margin: 1rem 0;
+    }
+
+    .breadcrumbs a {
+      color: #0077cc;    /* link color for clickable breadcrumbs */
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumbs span.separator {
+      margin: 0 0.3rem;
+    }
+
+    /* Page content */
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main navigation -->
+  <nav class="main-nav">
+    <a href="#">Home</a>
+    <a href="#">Electronics</a>
+    <a href="#">Phones</a>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <a href="#">Home</a>
+    <span class="separator">&gt;</span>
+    <a href="#">Electronics</a>
+    <span class="separator">&gt;</span>
+    <a href="#">Phones</a>
+    <span class="separator">&gt;</span>
+    <span>Smartphone XYZ</span>
+  </div>
+
+  <!-- Example page content -->
+  <p>
+    Welcome to the Smartphone XYZ page. Breadcrumbs help you navigate back to categories and parent pages easily.
+  </p>
+</body>
+</html>

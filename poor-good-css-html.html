@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Background Accessibility Demo</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f4f4f4;
+    }
+
+    h2 {
+        margin-top: 40px;
+    }
+
+    /* Example Boxes */
+    .example-box {
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+    }
+
+    /* Poor Contrast */
+    .poor-contrast {
+        color: lightgray;
+        background-color: whitesmoke;
+        border: 1px solid #ccc;
+    }
+
+    /* Good Contrast */
+    .good-contrast {
+        color: white;
+        background-color: #2f4f4f; /* darkslategray */
+    }
+
+    /* Busy Background */
+    .busy-background {
+        background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+        background-size: 200px;
+        color: black;
+        border: 1px solid #ccc;
+    }
+
+    /* Text overlay fix */
+    .overlay {
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 15px;
+        border-radius: 6px;
+        display: inline-block;
+    }
+
+    /* Color-only example */
+    .color-only-error {
+        background: #ffdddd;
+        border-left: 6px solid red;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .color-icon {
+        font-weight: bold;
+        margin-right: 5px;
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<h1>Accessibility of Backgrounds — Demo</h1>
+
+<!-- Poor Contrast -->
+<h2>❌ Example 1: Poor Contrast</h2>
+<div class="example-box poor-contrast">
+    This text is hard to read because the contrast is too low.
+</div>
+
+<!-- Good Contrast -->
+<h2>✅ Example 2: Good Contrast</h2>
+<div class="example-box good-contrast">
+    This text has strong contrast and is easy to read.
+</div>
+
+<!-- Busy Background -->
+<h2>❌ Example 3: Busy Background (Hard to Read)</h2>
+<div class="example-box busy-background">
+    This text is difficult to read because the background image is too busy.
+</div>
+
+<!-- Fix with Overlay -->
+<h2>✅ Example 4: Fixing Busy Background with Overlay</h2>
+<div class="example-box busy-background">
+    <div class="overlay">Adding a dark overlay makes the text readable.</div>
+</div>
+
+<!-- Color-Only Meaning -->
+<h2>❌ Example 5: Color Alone Used for Meaning</h2>
+<div class="example-box">
+    <p style="color: red;">Error: Something went wrong.</p>
+</div>
+
+<!-- Improved -->
+<h2>✅ Example 6: Accessible Color + Icon/Text</h2>
+<div class="example-box color-only-error">
+    <span class="color-icon">⚠️</span>
+    Error: Something went wrong.
+</div>
+
+</body>
+</html>

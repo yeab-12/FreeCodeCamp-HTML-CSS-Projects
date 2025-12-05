@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Demo</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    h2 {
+        margin-top: 40px;
+    }
+
+    .box {
+        width: 80px;
+        height: 50px;
+        margin: 5px;
+        border-radius: 6px;
+    }
+
+    #one   { background: #4d70b2; }
+    #two   { background: #5c4db2; }
+    #three { background: #4da3b2; }
+
+    .container {
+        border: 2px dashed #999;
+        background: white;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .flex {
+        display: flex;
+    }
+</style>
+</head>
+<body>
+
+<h1>CSS Flexbox Demo</h1>
+
+<!-- 1. NO FLEX -->
+<h2>1. Normal Layout (No Flex)</h2>
+<div class="container">
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
+</div>
+
+<!-- 2. FLEX ROW -->
+<h2>2. Flexbox Row (default)</h2>
+<div class="container flex" style="flex-direction: row;">
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
+</div>
+
+<!-- 3. ROW-REVERSE -->
+<h2>3. Flexbox Row-Reverse</h2>
+<div class="container flex" style="flex-direction: row-reverse;">
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
+</div>
+
+<!-- 4. COLUMN -->
+<h2>4. Flexbox Column</h2>
+<div class="container flex" style="flex-direction: column;">
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
+</div>
+
+<!-- 5. COLUMN-REVERSE -->
+<h2>5. Flexbox Column-Reverse</h2>
+<div class="container flex" style="flex-direction: column-reverse;">
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
+</div>
+
+<!-- 6. JUSTIFY-CONTENT -->
+<h2>6. justify-content: space-around</h2>
+<div class="container flex" style="justify-content: space-around;">
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
+</div>
+
+<!-- 7. ALIGN-ITEMS -->
+<h2>7. align-items: center (vertical alignment)</h2>
+<div class="container flex" style="height: 120px; align-items: center;">
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
+</div>
+
+<!-- 8. FLEX-WRAP -->
+<h2>8. flex-wrap: wrap</h2>
+<div class="container flex" style="flex-wrap: wrap; width: 180px;">
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+</div>
+
+
+
+
+<style>
+body{
+    font-family: Arial;
+    padding:20px;
+    background:#f4f4f4;
+}
+h2{
+    margin-top:40px;
+    background:#333;
+    color:white;
+    padding:6px 10px;
+}
+.demo-box{
+    border:2px solid #333;
+    padding:10px;
+    margin:15px 0;
+    background:white;
+}
+.container{
+    display:flex;
+    gap:10px;
+    padding:10px;
+    background:#eee;
+    border:1px dashed #999;
+}
+.item{
+    background:#ff7f50;
+    color:white;
+    padding:10px;
+    width:80px;
+    text-align:center;
+    font-weight:bold;
+}
+.box-blue{ background:#3498db; }
+.box-green{ background:#2ecc71; }
+.box-purple{ background:#9b59b6; }
+.box-red{ background:#e74c3c; }
+</style>
+
+
+<h1>Flexbox Topics Demo (All in One Code)</h1>
+
+<!-- 1. FLEX-WRAP -->
+<h2>1. flex-wrap (nowrap, wrap, wrap-reverse)</h2>
+
+<div class="demo-box">
+    <p><b>flex-wrap: nowrap</b> (items forced on one line)</p>
+    <div class="container" style="flex-wrap:nowrap;">
+        <div class="item box-blue">1</div>
+        <div class="item box-green">2</div>
+        <div class="item box-purple">3</div>
+        <div class="item box-red">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <p><b>flex-wrap: wrap</b> (items go to next line)</p>
+    <div class="container" style="flex-wrap:wrap;">
+        <div class="item box-blue">1</div>
+        <div class="item box-green">2</div>
+        <div class="item box-purple">3</div>
+        <div class="item box-red">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <p><b>flex-wrap: wrap-reverse</b></p>
+    <div class="container" style="flex-wrap:wrap-reverse;">
+        <div class="item box-blue">1</div>
+        <div class="item box-green">2</div>
+        <div class="item box-purple">3</div>
+        <div class="item box-red">4</div>
+        <div class="item">5</div>
+    </div>
+</div>
+
+
+
+<!-- 2. JUSTIFY-CONTENT -->
+<h2>2. justify-content (main axis alignment)</h2>
+
+<div class="demo-box">
+    <p><b>justify-content: center</b></p>
+    <div class="container" style="justify-content:center;">
+        <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+    </div>
+
+    <p><b>justify-content: space-between</b></p>
+    <div class="container" style="justify-content:space-between;">
+        <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+    </div>
+
+    <p><b>justify-content: space-around</b></p>
+    <div class="container" style="justify-content:space-around;">
+        <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+    </div>
+</div>
+
+
+
+<!-- 3. ALIGN-ITEMS -->
+<h2>3. align-items (cross axis alignment)</h2>
+
+<div class="demo-box">
+    <p><b>align-items: center</b></p>
+    <div class="container" style="height:100px; align-items:center;">
+        <div class="item">X</div><div class="item" style="height:50px;">Y</div><div class="item">Z</div>
+    </div>
+
+    <p><b>align-items: flex-start</b></p>
+    <div class="container" style="height:100px; align-items:flex-start;">
+        <div class="item">X</div><div class="item" style="height:50px;">Y</div><div class="item">Z</div>
+    </div>
+
+    <p><b>align-items: flex-end</b></p>
+    <div class="container" style="height:100px; align-items:flex-end;">
+        <div class="item">X</div><div class="item" style="height:50px;">Y</div><div class="item">Z</div>
+    </div>
+</div>
+
+
+
+<!-- 4. ALIGN-SELF -->
+<h2>4. align-self (single item override)</h2>
+
+<div class="demo-box">
+    <p><b>Item 2 uses align-self: flex-end</b></p>
+    <div class="container" style="height:100px; align-items:center;">
+        <div class="item box-blue">1</div>
+        <div class="item box-green" style="align-self:flex-end;">2</div>
+        <div class="item box-purple">3</div>
+    </div>
+</div>
+
+
+
+<!-- 5. FLEX-DIRECTION -->
+<h2>5. flex-direction (row, column, reverse)</h2>
+
+<div class="demo-box">
+    <p><b>flex-direction: row (default)</b></p>
+    <div class="container" style="flex-direction:row;">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    </div>
+
+    <p><b>flex-direction: column</b></p>
+    <div class="container" style="flex-direction:column; height:200px;">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    </div>
+
+    <p><b>flex-direction: row-reverse</b></p>
+    <div class="container" style="flex-direction:row-reverse;">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    </div>
+</div>
+
+
+
+<!-- 6. FLEX-FLOW -->
+<h2>6. flex-flow (direction + wrap)</h2>
+
+<div class="demo-box">
+    <p><b>flex-flow: row wrap</b></p>
+    <div class="container" style="flex-flow:row wrap;">
+        <div class="item box-blue">A</div><div class="item box-green">B</div>
+        <div class="item box-purple">C</div><div class="item box-red">D</div>
+        <div class="item">E</div><div class="item">F</div>
+    </div>
+
+    <p><b>flex-flow: column wrap</b></p>
+    <div class="container" style="flex-flow:column wrap; height:200px;">
+        <div class="item box-blue">A</div><div class="item box-green">B</div>
+        <div class="item box-purple">C</div><div class="item box-red">D</div>
+        <div class="item">E</div><div class="item">F</div>
+    </div>
+</div>
+
+
+
+
+
+<header class="header">
+      <h1>css flexbox photo gallery</h1>
+</header>
+<div class="gallery">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg">
+</div>
+
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f6f7;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.gallery::after{
+  content:"";
+  width:350px;
+}
+
+</style>
+
+
+</body>
+</html>

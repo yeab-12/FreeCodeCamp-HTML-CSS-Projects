@@ -1,0 +1,138 @@
+/* 4, 5. Body styles: Updated background and font */
+body {
+    background-color: #f0ebe3; /* Soft, light beige/off-white */
+    font-family: 'Georgia', serif; /* Changed to a classic serif font for elegance */
+    color: #333; /* Darker text for contrast */
+    line-height: 1.6;
+}
+
+/* 6. Paragraph margin */
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* 7. Link styles: Subtle and professional */
+a {
+    text-decoration: none;
+    color: #4a4a4a; /* Dark charcoal grey for sophistication */
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+a:hover {
+    color: #a0522d; /* Rosy brown on hover */
+}
+
+/* 9-15. Business Card Container Styles: Modern, elevated design */
+.business-card {
+    width: 300px;
+    background-color: #ffffff; /* Crisp white background */
+    padding: 30px 20px; /* Increased top/bottom padding */
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px; /* More rounded corners */
+    /* A stronger, more noticeable shadow for an 'elevated' feel */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: none;
+    overflow: hidden; /* To contain any elements */
+}
+
+/* 19. Profile Image Style: Maintained circular, but with richer colors */
+.profile-image {
+    max-width: 100%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #a0522d; /* Deep rosy brown border */
+    box-shadow: 0 0 0 6px rgba(160, 82, 45, 0.1); /* Subtle ring effect */
+}
+
+/* Typography and Hierarchy */
+.full-name {
+    font-size: 1.8em; /* Larger, more dominant name */
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.5px; /* Improved readability */
+    margin-bottom: 4px;
+}
+
+.designation {
+    font-style: italic;
+    color: #a0522d; /* Designated role in the Rosy Brown color */
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.company {
+    font-weight: 600;
+    color: #555;
+    margin-top: 0;
+    font-size: 0.9em;
+}
+
+/* Horizontal Rule Style */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(160, 82, 45, 0.5), rgba(0, 0, 0, 0));
+    margin: 20px 0;
+}
+
+/* Contact Info */
+.business-card p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* Portfolio Link Button */
+.portfolio-link {
+    display: inline-block; /* Treat as a button */
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #a0522d; /* Rosy brown button background */
+    color: #ffffff; /* White text for contrast */
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease-in-out, transform 0.1s;
+}
+
+.portfolio-link:hover {
+    background-color: #8b4513; /* Darker brown on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Social Media Section */
+.social-media {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.social-media h2 {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: normal;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.social-media a {
+    display: inline-block; /* Line up the links horizontally */
+    margin: 0 8px;
+    font-size: 0.9em;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.social-media a:hover {
+    color: #a0522d;
+    border-bottom: 2px solid #a0522d; /* Underline effect on hover */
+}

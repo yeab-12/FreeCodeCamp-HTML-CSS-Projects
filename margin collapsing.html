@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Margin Collapsing Demo</title>
+<style>
+  .box1 { margin-bottom: 30px; background-color: lightblue; padding: 10px; }
+  .box2 { margin-top: 50px; background-color: lightgreen; padding: 10px; }
+
+  .parent { margin-top: 40px; background-color: lightyellow; padding: 0; }
+  .child { margin-top: 30px; background-color: lightpink; padding: 10px; }
+
+  .prevent-collapse { margin-top: 40px; padding-top: 1px; background-color: lightgray; }
+  .child-prevent { margin-top: 30px; background-color: pink; padding: 10px; }
+
+  .empty-block { margin-top: 20px; margin-bottom: 10px; height: 0; background-color: lightcoral; }
+  .next-block { background-color: lightgoldenrodyellow; padding: 10px; }
+</style>
+</head>
+<body>
+<h2>Margin Collapsing Demo</h2>
+
+<h3>1. Collapsing between siblings</h3>
+<div class="box1">Box 1</div>
+<div class="box2">Box 2</div>
+
+<h3>2. Collapsing parent & child</h3>
+<div class="parent">
+  <div class="child">Child element</div>
+</div>
+
+<h3>3. Preventing collapse with padding</h3>
+<div class="prevent-collapse">
+  <div class="child-prevent">Child element</div>
+</div>
+
+<h3>4. Empty element margin collapsing</h3>
+<div class="empty-block"></div>
+<div class="next-block">Next block</div>
+
+</body>
+</html>

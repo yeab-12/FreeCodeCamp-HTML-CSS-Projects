@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confidential Email</title>
+<style>
+  /* Main email container */
+  #email {
+    padding: 50px;
+    margin-top: 50px;
+    width: 500px; /* total width including padding & border */
+    border: 2px solid black;
+    box-sizing: border-box; /* ensures total width = 500px */
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    position: relative;
+  }
+
+/* Confidential and Top Secret badges */
+#confidential, #top-secret {
+display: inline-block;
+padding: 10px 20px;
+margin-left: 10px;
+border: 2px solid red;
+font-weight: bold;
+color: white;
+text-align: center;
+transform: rotate(-10deg);
+}
+
+#confidential {
+background-color: crimson;
+transform: rotate(-10deg);
+}
+
+#top-secret {
+background-color: darkred;
+transform: rotate(10deg);
+}
+
+/* Paragraph styling */
+#email p {
+margin-top: 20px;
+line-height: 1.5;
+}
+
+/* Blurred text spans */
+.blurred {
+filter: blur(3px);
+color: black;
+} </style>
+
+</head>
+<body>
+
+<main id="email">
+        
+        <!-- User Story: Two div elements for security badges -->
+        <div id="confidential">CONFIDENTIAL</div>
+        <div id="top-secret">TOP SECRET</div>
+
+        <h2>Subject: Next Quarter Strategy</h2>
+        
+        <!-- User Story: At least three paragraph elements -->
+        <p>
+            Dear Team,
+        </p>
+        <p>
+            The final Q3 performance numbers are in, and the results are incredibly promising. Our pivot into the <span class="blurred">nano-technology market has yielded higher than expected margins</span>. We need to begin planning the Q4 rollout immediately.
+        </p>
+        <p>
+            The major hurdle we face remains the acquisition of the <span class="blurred">new server farm located in Iceland</span>. This facility is critical for handling the projected data loads from the <span class="blurred">Project Chimera launch next month</span>.
+        </p>
+        <p>
+            Please review the attached documents and prepare your reports. We will meet on Tuesday at 9 AM to finalize the details.
+        </p>
+        <p>
+            Best Regards,<br>
+            Management
+        </p>
+
+</body>
+</html>

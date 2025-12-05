@@ -1,0 +1,52 @@
+/* Blog Post Card Container */
+.blog-post-card {
+    background-color: white;  /* White background */
+    border-radius: 15px;      /* Rounded corners */
+    width: 350px;             /* Width of the card */
+    text-align: left;         /* Text alignment */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    overflow: hidden;         /* Clips image/borders */
+    margin: 20px auto;        /* Center the card */
+    font-family: Arial, sans-serif;
+}
+
+/* Post Image */
+.post-img {
+    width: 100%;              /* Fill the card's width */
+    border-bottom: 4px solid #ddd;  /* Bottom border */
+    display: block;
+}
+
+/* Post Content */
+.post-content {
+    padding: 20px;            /* Padding inside the card */
+}
+
+/* Title and Excerpt */
+.post-title {
+    color: #333;              /* Non-default text color */
+    margin: 0 0 10px 0;       /* Margin on all sides */
+}
+
+.post-excerpt {
+    color: #555;              /* Non-default text color */
+    margin: 0 0 15px 0;       /* Margin on all sides */
+    line-height: 1.5;
+}
+
+/* Read More Button */
+.read-more {
+    display: inline-block;       /* Display as inline-block */
+    padding: 10px 20px;          /* Padding */
+    margin: 10px 0;              /* Margins */
+    background-color: #007BFF;   /* Background color */
+    color: white;                /* Text color */
+    text-decoration: none;       /* Remove underline */
+    border-radius: 8px;          /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.read-more:hover {
+    background-color: #0056b3;  /* Darker shade on hover */
+}

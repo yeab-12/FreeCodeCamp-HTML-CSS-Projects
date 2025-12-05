@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--What This Shows
+Blue = unvisited
+Purple = visited
+Red = hover
+Orange = active (clicked)
+Custom link still keeps contrast and visited state.
+Links have five important states:
+✔ 1. :link — Unvisited link
+This styles the link before the user clicks it.
+✔ 2. :visited — Visited link
+Shows users which pages they have already opened.
+✔ 3. :hover — Mouse over link
+Helps users recognize that the link is interactive.
+✔ 4. :focus — Keyboard focused link
+Important for accessibility and navigating with the keyboard (Tab key).
+✔ 5. :active — While the link is being clicked
+Gives instant feedback during the click.-->
+<head>
+  <link rel="stylesheet" href="links-state-all.css">
+  <meta charset="UTF-8">
+  <title>Link Style Demo</title>
+</head>
+<body>
+
+  <h2>Default Browser Link Styles</h2>
+  <p>
+    Visit <a href="https://www.example.com/cats">Cats</a> or 
+    <a href="https://www.example.com/dogs">Dogs</a>.
+  </p>
+
+  <h2>Custom but Accessible Link Styles</h2>
+  <p>
+    <a class="custom" href="https://www.example.com">Custom Link</a>
+  </p>
+  
+
+</body>
+</html>

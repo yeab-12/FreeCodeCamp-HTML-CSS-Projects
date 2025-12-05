@@ -1,0 +1,45 @@
+/* 1. list-style-type demonstration */
+.type-example li:nth-child(1) {
+    list-style-type: disc;
+}
+.type-example li:nth-child(2) {
+    list-style-type: circle;
+}
+.type-example li:nth-child(3) {
+    list-style-type: square;
+}
+.type-example li:nth-child(4) {
+    list-style-type: none;
+}
+
+/* 2. list-style-position */
+.position-inside {
+    list-style-position: inside;
+    background: #e0f7fa;
+    padding: 10px;
+    width: 350px;
+}
+
+.position-outside {
+    list-style-position: outside;
+    background: #ffe0b2;
+    padding: 10px;
+    width: 350px;
+}
+
+/* 3. list-style-image */
+.image-example {
+    list-style-image: url('https://cdn.freecodecamp.org/platform/universal/freecodecamp-org-gravatar.jpeg');
+    list-style-position: inside;
+    width: 300px;
+    padding: 10px;
+    background: #f1f8e9;
+}
+
+/* 4. Shorthand usage */
+.shorthand-example {
+    list-style: square inside;
+    background: #e8eaf6;
+    padding: 10px;
+    width: 300px;
+}
