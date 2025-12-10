@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Tribute Page practice project" />
+    <title>Tribute Page</title>
+    <style>
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        #main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        #title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        #img-div {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+        
+        #image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        #img-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        #tribute-info {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        #tribute-info h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        #tribute-info p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        #tribute-info ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        #tribute-info li {
+            margin-bottom: 8px;
+        }
+        
+        #tribute-link {
+            display: block;
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #tribute-link:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            #title {
+                font-size: 2rem;
+            }
+            
+            #tribute-info {
+                padding: 15px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+        <h1 id="title">Marie Curie: Pioneer in Radioactivity</h1>
+        
+        <div id="img-div">
+            <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/640px-Marie_Curie_c._1920s.jpg" alt="Marie Curie in her laboratory">
+            <figcaption id="img-caption">Marie Curie in her laboratory, conducting groundbreaking research on radioactivity.</figcaption>
+        </div>
+        
+        <div id="tribute-info">
+            <h2>The Legacy of Marie Curie</h2>
+            <p>Marie Curie (1867-1934) was a Polish-born, naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win the Nobel Prize twice, and the only person to win the Nobel Prize in two different scientific fields.</p>
+            
+            <h3>Key Achievements:</h3>
+            <ul>
+                <li>Discovered the elements polonium and radium</li>
+                <li>Developed the theory of radioactivity</li>
+                <li>Pioneered techniques for isolating radioactive isotopes</li>
+                <li>Founded the Curie Institutes in Paris and Warsaw</li>
+                <li>Established the first mobile radiography units during World War I</li>
+            </ul>
+            
+            <p>Her work not only advanced our understanding of atomic physics but also laid the foundation for modern cancer treatment through radiation therapy. Despite facing significant discrimination as a woman in science, she persisted in her research and became one of the most celebrated scientists in history.</p>
+        </div>
+        
+        <a id="tribute-link" href="https://en.wikipedia.org/wiki/Marie_Curie" target="_blank">Learn more about Marie Curie on Wikipedia</a>
+        
+        <footer>
+            <p>Created as a tribute to one of history's greatest scientists</p>
+            <p>© 2023 Tribute Page Project</p>
+        </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Article</title>
+    <style>
+        html {
+            font-size: 24px;
+        }
+        
+        .newspaper {
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .name {
+            font-size: 2rem; /* 2 times root font-size (24px × 2 = 48px) */
+            font-family: 'Times New Roman', serif;
+            text-transform: uppercase;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        
+        .date {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .headline {
+            font-size: 2em; /* 2 times parent's font-size (16px × 2 = 32px) */
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .sub-headline {
+            font-weight: 100;
+            font-size: 1.5em; /* 1.5 times parent's font-size (16px × 1.5 = 24px) */
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 15px;
+        }
+        
+        .author {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #e74c3c;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+        
+        .text {
+            text-indent: 20px;
+            line-height: 2em; /* 2 times parent's font-size (16px × 2 = 32px) */
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .text::first-letter {
+            font-weight: bold;
+            font-size: 2em; /* 2 times parent's font-size (16px × 2 = 32px) */
+            color: #2c3e50;
+            float: left;
+            line-height: 1;
+            margin-right: 5px;
+            margin-top: 3px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="newspaper">
+        <div class="name">The Daily Chronicle</div>
+        <div class="date">Monday, October 23, 2023 | Vol. 156, No. 42</div>
+        
+        <h1 class="headline">Breakthrough in Renewable Energy Technology Announced</h1>
+        <h2 class="sub-headline">Scientists achieve unprecedented efficiency in solar cell design, promising cleaner and more affordable energy</h2>
+        
+        <div class="author">By Dr. Sarah Chen, Energy Correspondent</div>
+        
+        <p class="text">In a landmark announcement today, researchers at the Global Energy Institute revealed a revolutionary breakthrough in solar technology that could transform the renewable energy landscape. The new photovoltaic cells, dubbed "Quantum Harvesters," have demonstrated a record-breaking 45% efficiency in laboratory tests, nearly doubling the performance of current commercial solar panels. This development comes at a critical time as nations worldwide struggle to meet ambitious carbon reduction targets.</p>
+        
+        <p class="text">The technology leverages advanced nanotechnology and perovskite materials to capture a broader spectrum of sunlight while minimizing energy loss. Dr. Michael Rodriguez, lead researcher on the project, explained that the cells incorporate a multi-layer design that efficiently converts both visible and infrared light into electricity. "What sets this apart is not just the efficiency, but the manufacturing scalability," Rodriguez stated during the press conference. "We've developed a production process that could make these panels cost-competitive with traditional silicon panels within two years."</p>
+        
+        <p class="text">Industry analysts predict this advancement could accelerate the global transition away from fossil fuels. The International Energy Agency has previously estimated that solar power needs to become the world's largest source of electricity by 2040 to avoid the worst impacts of climate change. With current solar technology plateauing around 22-24% efficiency for commercial panels, this breakthrough represents a significant leap forward. Several major energy companies have already expressed interest in licensing the technology, with pilot production facilities expected to begin construction early next year.</p>
+        
+        <p class="text">The research team emphasized that their work is part of a larger initiative to create integrated renewable energy systems. Alongside the solar breakthrough, they announced complementary developments in energy storage and smart grid technology. "We're not just creating better solar panels," said project director Elena Petrova. "We're building an entire ecosystem where energy generation, storage, and distribution work seamlessly together." The team plans to publish their complete findings in next month's issue of Nature Energy, following the patent approval process currently underway in multiple countries.</p>
+    </div>
+</body>
+</html>

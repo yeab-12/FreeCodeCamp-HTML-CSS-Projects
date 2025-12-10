@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* GENERAL BOX STYLE */
+.box {
+  padding: 10px;
+  margin: 15px 0;
+  border: 2px solid #333;
+  background: #f0f0f0;
+}
+
+/* 1. FLOAT EXAMPLE */
+.float-box img {
+  float: left;
+  margin-right: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+/* clearfix */
+.float-box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 2. STATIC vs RELATIVE */
+.relative {
+  position: relative;
+  left: 20px;
+  top: 10px;
+  background: #ffe5b4;
+}
+
+/* 3. ABSOLUTE POSITIONING */
+.abs-wrapper {
+  position: relative;
+  height: 120px;
+  background: #d8f3dc;
+}
+.abs {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #95d5b2;
+  padding: 5px;
+}
+
+/* 4. FIXED POSITIONING */
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #ff6b6b;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* 5. STICKY POSITIONING */
+.sticky {
+  position: sticky;
+  top: 10px;
+  background: #74c0fc;
+  padding: 8px;
+  border: 2px solid #1c7ed6;
+}
+
+/* 6. Z-INDEX STACKING */
+.z-container {
+  position: relative;
+  height: 180px;
+  background: #e9ecef;
+}
+.z1, .z2, .z3 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  color: white;
+}
+.z1 {
+  background: #ff8787;
+  top: 20px; left: 20px;
+  z-index: 1;
+}
+.z2 {
+  background: #ffd43b;
+  top: 40px; left: 40px;
+  z-index: 3;
+}
+.z3 {
+  background: #69db7c;
+  top: 60px; left: 60px;
+  z-index: 2;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS FLOATS & POSITIONING DEMO</h2>
+
+<!-- FLOAT -->
+<div class="box float-box">
+  <h3>1. Float Example</h3>
+  <img src="https://placehold.co/80x80" alt="">
+  This text wraps around the floated image.  
+  Float removes the image from normal document flow.
+</div>
+
+<!-- STATIC vs RELATIVE -->
+<div class="box">
+  <h3>2. Static vs Relative Positioning</h3>
+  <p>Static (default): stays in normal flow.</p>
+  <p class="relative">Relative: moved 20px right & 10px down but space is kept.</p>
+</div>
+
+<!-- ABSOLUTE -->
+<div class="box abs-wrapper">
+  <h3>3. Absolute Positioning</h3>
+  <div class="abs">Absolutely Positioned</div>
+  Absolute is removed from document flow and positioned inside nearest positioned parent.
+</div>
+
+<!-- FIXED -->
+<div class="fixed">Fixed Box</div>
+
+<!-- STICKY -->
+<div class="box">
+  <h3>4. Sticky Positioning</h3>
+  <div class="sticky">I stick when you scroll</div>
+  <p>Scroll to see sticky behavior...</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</div>
+
+<!-- Z-INDEX -->
+<div class="box z-container">
+  <h3>5. Z-Index Stacking Order</h3>
+  <div class="z1">z-index 1</div>
+  <div class="z2">z-index 3 (on top)</div>
+  <div class="z3">z-index 2</div>
+</div>
+
+</body>
+</html>
