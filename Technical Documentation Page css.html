@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation Page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+}
+
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: white;
+    border-right: 3px solid #3498db;
+    overflow-y: auto;
+}
+
+#navbar header {
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #1a252f;
+    border-bottom: 2px solid #3498db;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    border-bottom: 1px solid #34495e;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+#main-doc {
+    margin-left: 320px;
+    padding: 30px;
+    max-width: 800px;
+}
+
+.main-section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-section header {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+code {
+    display: block;
+    background-color: #f8f9fa;
+    border-left: 3px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+    font-family: 'Courier New', monospace;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    #navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+    
+    #main-doc {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+    </style>
+  </head>
+
+  <body>
+    <nav id="navbar">
+        <header>JavaScript Documentation</header>
+        <a href="#Introduction_to_JavaScript" class="nav-link">Introduction to JavaScript</a>
+        <a href="#Variables_and_Data_Types" class="nav-link">Variables and Data Types</a>
+        <a href="#Functions_and_Scope" class="nav-link">Functions and Scope</a>
+        <a href="#Control_Structures" class="nav-link">Control Structures</a>
+        <a href="#Objects_and_Arrays" class="nav-link">Objects and Arrays</a>
+        <a href="#DOM_Manipulation" class="nav-link">DOM Manipulation</a>
+        <a href="#Error_Handling" class="nav-link">Error Handling</a>
+    </nav>
+    
+    <main id="main-doc">
+        <section class="main-section" id="Introduction_to_JavaScript">
+            <header>Introduction to JavaScript</header>
+            <p>JavaScript is a high-level, interpreted programming language that is one of the core technologies of the World Wide Web. It enables interactive web pages and is an essential part of web applications.</p>
+            <p>Initially created to make web pages alive, JavaScript can execute in the browser, on the server, or on any device that has a JavaScript engine.</p>
+            <code>console.log("Hello, World!");</code>
+            <p>JavaScript follows the ECMAScript specification and has evolved significantly since its creation in 1995.</p>
+            <ul>
+                <li>Client-side scripting for web browsers</li>
+                <li>Server-side development with Node.js</li>
+            </ul>
+        </section>
+        
+        <section class="main-section" id="Variables_and_Data_Types">
+            <header>Variables and Data Types</header>
+            <p>Variables in JavaScript are containers for storing data values. JavaScript uses keywords like <code>var</code>, <code>let</code>, and <code>const</code> for variable declaration.</p>
+            <code>let message = "Hello";<br>const PI = 3.14159;<br>var count = 10;</code>
+            <p>JavaScript has dynamic typing, meaning a variable can hold any type of data without explicit type declaration.</p>
+            <p>Primitive data types include:</p>
+            <ul>
+                <li>String: Textual data</li>
+                <li>Number: Integer or floating-point numbers</li>
+                <li>Boolean: true/false values</li>
+                <li>Undefined: Variable declared but not assigned</li>
+                <li>Null: Intentional absence of value</li>
+            </ul>
+            <code>let name = "Alice"; // String<br>let age = 30; // Number<br>let isStudent = true; // Boolean</code>
+        </section>
+        
+        <section class="main-section" id="Functions_and_Scope">
+            <header>Functions and Scope</header>
+            <p>Functions are reusable blocks of code that perform specific tasks. They can take parameters and return values.</p>
+            <p>JavaScript has function scope and block scope (with <code>let</code> and <code>const</code>). Variables declared with <code>var</code> have function scope.</p>
+            <code>function greet(name) {<br>    return "Hello, " + name + "!";<br>}<br><br>// Arrow function<br>const multiply = (a, b) => a * b;</code>
+            <p>Closures are an important concept where a function retains access to variables from its lexical scope.</p>
+            <p>Hoisting is JavaScript's behavior of moving declarations to the top of their containing scope during compilation.</p>
+            <code>// Function declaration (hoisted)<br>sayHello();<br><br>function sayHello() {<br>    console.log("Hello!");<br>}</code>
+        </section>
+        
+        <section class="main-section" id="Control_Structures">
+            <header>Control Structures</header>
+            <p>Control structures determine the flow of program execution. JavaScript supports various conditional statements and loops.</p>
+            <p>Conditional statements include <code>if</code>, <code>else if</code>, <code>else</code>, and <code>switch</code>.</p>
+            <code>let score = 85;<br><br>if (score >= 90) {<br>    console.log("A");<br>} else if (score >= 80) {<br>    console.log("B");<br>} else {<br>    console.log("C");<br>}</code>
+            <p>Loop structures include <code>for</code>, <code>while</code>, <code>do...while</code>, and <code>for...of</code>/<code>for...in</code> loops.</p>
+            <code>// For loop<br>for (let i = 0; i < 5; i++) {<br>    console.log(i);<br>}<br><br>// While loop<br>let i = 0;<br>while (i < 5) {<br>    console.log(i);<br>    i++;<br>}</code>
+        </section>
+        
+        <section class="main-section" id="Objects_and_Arrays">
+            <header>Objects and Arrays</header>
+            <p>Objects are collections of key-value pairs used to store complex data structures. Arrays are list-like objects used to store multiple values.</p>
+            <code>// Object<br>const person = {<br>    name: "John",<br>    age: 30,<br>    profession: "Developer"<br>};<br><br>// Array<br>const colors = ["red", "green", "blue"];</code>
+            <p>Objects can have properties and methods. Properties are values associated with an object, and methods are functions that belong to an object.</p>
+            <p>Arrays have many built-in methods like <code>push()</code>, <code>pop()</code>, <code>map()</code>, <code>filter()</code>, and <code>reduce()</code>.</p>
+            <ul>
+                <li>Objects use dot notation or bracket notation</li>
+                <li>Arrays are zero-indexed</li>
+                <li>Both can be nested and combined</li>
+            </ul>
+            <code>// Accessing object properties<br>console.log(person.name); // "John"<br>console.log(person["age"]); // 30<br><br>// Array methods<br>colors.push("yellow");<br>console.log(colors.length); // 4</code>
+        </section>
+        
+        <section class="main-section" id="DOM_Manipulation">
+            <header>DOM Manipulation</header>
+            <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so programs can change the document structure, style, and content.</p>
+            <p>JavaScript can access and manipulate the DOM to create dynamic web pages.</p>
+            <code>// Select element<br>const element = document.getElementById("myElement");<br><br>// Change content<br>element.textContent = "New content";<br><br>// Add event listener<br>element.addEventListener("click", function() {<br>    alert("Element clicked!");<br>});</code>
+            <p>Common DOM manipulation methods include:</p>
+            <ul>
+                <li><code>getElementById()</code>, <code>querySelector()</code></li>
+                <li><code>createElement()</code>, <code>appendChild()</code></li>
+                <li><code>setAttribute()</code>, <code>removeAttribute()</code></li>
+                <li><code>classList.add()</code>, <code>classList.remove()</code></li>
+            </ul>
+            <p>Event handling allows JavaScript to respond to user interactions like clicks, keypresses, and form submissions.</p>
+        </section>
+        
+        <section class="main-section" id="Error_Handling">
+            <header>Error Handling</header>
+            <p>Error handling in JavaScript is done using <code>try...catch</code> statements. This allows you to handle runtime errors gracefully without stopping script execution.</p>
+            <code>try {<br>    // Code that might throw an error<br>    let result = riskyOperation();<br>    console.log(result);<br>} catch (error) {<br>    // Handle the error<br>    console.log("An error occurred:", error.message);<br>} finally {<br>    // Code that runs regardless of error<br>    console.log("Operation attempted");<br>}</code>
+            <p>JavaScript has several built-in error types including <code>SyntaxError</code>, <code>ReferenceError</code>, <code>TypeError</code>, and <code>RangeError</code>.</p>
+            <p>You can also throw custom errors using the <code>throw</code> statement with any value, but it's common to use <code>Error</code> objects.</p>
+            <code>function validateInput(input) {<br>    if (!input) {<br>        throw new Error("Input cannot be empty");<br>    }<br>    return input;<br>}</code>
+            <p>Proper error handling improves user experience and makes debugging easier.</p>
+        </section>
+    </main>
+  
+  </body>
+</html>

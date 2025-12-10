@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Inventory</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        thead {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        /* Attribute selectors for row backgrounds */
+        tr[class="read"] {
+            background-image: linear-gradient(to right, #d4edda, #f8f9fa);
+        }
+        
+        tr[class="to-read"] {
+            background-image: linear-gradient(to right, #fff3cd, #f8f9fa);
+        }
+        
+        tr[class="in-progress"] {
+            background-image: linear-gradient(to right, #d1ecf1, #f8f9fa);
+        }
+        
+        /* Status spans */
+        span[class="status"] {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        
+        /* Status styling based on parent row class */
+        tr[class="read"] span[class="status"] {
+            border: 2px solid #28a745;
+            background-image: linear-gradient(to bottom, #d4edda, #c3e6cb);
+            color: #155724;
+        }
+        
+        tr[class="to-read"] span[class="status"] {
+            border: 2px solid #ffc107;
+            background-image: linear-gradient(to bottom, #fff3cd, #ffeaa7);
+            color: #856404;
+        }
+        
+        tr[class="in-progress"] span[class="status"] {
+            border: 2px solid #17a2b8;
+            background-image: linear-gradient(to bottom, #d1ecf1, #bee5eb);
+            color: #0c5460;
+        }
+        
+        /* Rating stars container */
+        span[class^="rate"] {
+            display: inline-block;
+            height: 25px;
+            width: 90px;
+            padding: 3px;
+        }
+        
+        /* Individual star styling */
+        span[class^="rate"] > span {
+            display: inline-block;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            margin: 0 2px;
+            height: 18px;
+            width: 18px;
+            background-color: #f8f9fa;
+        }
+        
+        /* Rating levels - one star */
+        span[class*="one"] > span:first-child {
+            background-image: linear-gradient(to bottom, #ffd700, #ffa500);
+        }
+        
+        /* Rating levels - two stars */
+        span[class*="two"] > span:first-child,
+        span[class*="two"] > span:nth-child(2) {
+            background-image: linear-gradient(to bottom, #ffd700, #ffa500);
+        }
+        
+        /* Rating levels - three stars */
+        span[class*="three"] > span:first-child,
+        span[class*="three"] > span:nth-child(2),
+        span[class*="three"] > span:nth-child(3) {
+            background-image: linear-gradient(to bottom, #ffd700, #ffa500);
+        }
+        
+        .book-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .book-author {
+            color: #7f8c8d;
+        }
+        
+        .book-category {
+            font-style: italic;
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book Inventory</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="read">
+                <td class="book-title">The Great Gatsby</td>
+                <td class="book-author">F. Scott Fitzgerald</td>
+                <td class="book-category">Classic Literature</td>
+                <td><span class="status">Read</span></td>
+                <td><span class="rate three"><span></span><span></span><span></span></span></td>
+            </tr>
+            <tr class="to-read">
+                <td class="book-title">Atomic Habits</td>
+                <td class="book-author">James Clear</td>
+                <td class="book-category">Self-Help</td>
+                <td><span class="status">To Read</span></td>
+                <td><span class="rate"><span></span><span></span><span></span></span></td>
+            </tr>
+            <tr class="in-progress">
+                <td class="book-title">The Midnight Library</td>
+                <td class="book-author">Matt Haig</td>
+                <td class="book-category">Fiction</td>
+                <td><span class="status">In Progress</span></td>
+                <td><span class="rate two"><span></span><span></span><span></span></span></td>
+            </tr>
+            <tr class="read">
+                <td class="book-title">Sapiens</td>
+                <td class="book-author">Yuval Noah Harari</td>
+                <td class="book-category">History</td>
+                <td><span class="status">Read</span></td>
+                <td><span class="rate one"><span></span><span></span><span></span></span></td>
+            </tr>
+            <tr class="read">
+                <td class="book-title">Project Hail Mary</td>
+                <td class="book-author">Andy Weir</td>
+                <td class="book-category">Science Fiction</td>
+                <td><span class="status">Read</span></td>
+                <td><span class="rate three"><span></span><span></span><span></span></span></td>
+            </tr>
+            <tr class="to-read">
+                <td class="book-title">Educated</td>
+                <td class="book-author">Tara Westover</td>
+                <td class="book-category">Memoir</td>
+                <td><span class="status">To Read</span></td>
+                <td><span class="rate"><span></span><span></span><span></span></span></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
