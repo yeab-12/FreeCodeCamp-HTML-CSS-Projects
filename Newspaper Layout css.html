@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Times</title>
+  <style>
+    /* Reset & base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Main grid layout */
+    .newspaper-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 1fr 1fr auto;
+      gap: 20px;
+      grid-template-areas:
+        "title title title"
+        "feature-article feature-article cover-image"
+        "secondary-article secondary-article cover-image"
+        "small-article1 small-article2 small-article3";
+    }
+
+    /* Grid areas */
+    .title { grid-area: title; text-align: center; }
+    .feature-article { grid-area: feature-article; }
+    .secondary-article { grid-area: secondary-article; }
+    .cover-image { grid-area: cover-image; }
+    .small-article1 { grid-area: small-article1; }
+    .small-article2 { grid-area: small-article2; }
+    .small-article3 { grid-area: small-article3; }
+
+    /* Header styling */
+    .title h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Article styling */
+    article {
+      background: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .feature-article h2,
+    .secondary-article h2 {
+      margin-bottom: 10px;
+      color: #e74c3c;
+    }
+
+    .small-article1 h3,
+    .small-article2 h3,
+    .small-article3 h3 {
+      margin-bottom: 8px;
+      color: #2980b9;
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    /* Cover image styling */
+    .cover-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .newspaper-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "title"
+          "feature-article"
+          "cover-image"
+          "secondary-article"
+          "small-article1"
+          "small-article2"
+          "small-article3";
+      }
+
+      .title h1 { font-size: 2rem; }
+      .feature-article h2 { font-size: 1.5rem; }
+      .secondary-article h2 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<main class="newspaper-layout">
+  <header class="title">
+    <h1>Global Times</h1>
+  </header>
+
+  <article class="feature-article">
+    <h2>Major Scientific Breakthrough</h2>
+    <p>Scientists have developed a new method to harness renewable energy more efficiently. This innovative approach promises to transform the energy sector and reduce global carbon emissions drastically. Experts are optimistic about the potential impact on both industrial and residential energy consumption.</p>
+  </article>
+
+  <article class="secondary-article">
+    <h2>Community Garden Initiative</h2>
+    <p>Local communities are coming together to create sustainable urban gardens, improving food security and fostering community engagement. Volunteers have planted vegetables and flowers in previously unused spaces, turning them into green hubs.</p>
+  </article>
+
+  <figure class="cover-image">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="City skyline with renewable energy panels">
+  </figure>
+
+  <article class="small-article1">
+    <h3>Tech Giants Collaborate on AI</h3>
+    <p>Five major technology companies join forces to ensure ethical AI development, aiming to protect privacy and improve safety standards.</p>
+  </article>
+
+  <article class="small-article2">
+    <h3>Historic Library Renovation</h3>
+    <p>The city's 150-year-old library reopens after extensive renovations, featuring modern facilities while preserving its historic charm.</p>
+  </article>
+
+  <article class="small-article3">
+    <h3>New Public Transit Route</h3>
+    <p>A newly launched bus line improves connectivity between downtown and suburban areas, reducing commute times for thousands of residents.</p>
+  </article>
+</main>
+
+</body>
+</html>
