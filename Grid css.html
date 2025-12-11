@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Grid Full Demo</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f4f4f4;
+}
+
+/* SECTION TITLE */
+h2 {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* ----------- 1. FLEXBOX (for comparison) ----------- */
+.flex-demo {
+  display: flex;
+  gap: 10px;
+}
+.flex-demo div {
+  background: #ff9f1c;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+/* ----------- 2. BASIC GRID (explicit grid with repeat + fr units) ------------ */
+.grid-basic {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal tracks */
+  gap: 10px;
+}
+.grid-basic div {
+  background: #2ec4b6;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* ----------- 3. IMPLICIT GRID (only 2 columns defined) ------------ */
+.grid-implicit {
+  display: grid;
+  grid-template-columns: 150px 150px; /* explicit */
+  gap: 10px;
+}
+.grid-implicit div {
+  background: #e71d36;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ----------- 4. minmax() DEMO ------------ */
+.grid-minmax {
+  display: grid;
+  grid-template-columns: minmax(150px, 300px) 1fr; /* flexible track */
+  gap: 10px;
+}
+.grid-minmax div {
+  background: #011627;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* ----------- 5. grid-column / grid-row positioning ------------ */
+.grid-position {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+}
+.grid-position div {
+  background: #4361ee;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.item-big {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  background: #7209b7;
+}
+
+/* ----------- 6. grid-template-areas demo (Holy Grail Layout) ------------ */
+.layout {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "left main right"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.header    { grid-area: header; background: #4cc9f0; padding: 20px; }
+.left      { grid-area: left; background: #f72585; padding: 20px; }
+.main      { grid-area: main; background: #3a0ca3; padding: 20px; color: white;}
+.right     { grid-area: right; background: #f72585; padding: 20px; }
+.footer    { grid-area: footer; background: #4cc9f0; padding: 20px; }
+</style>
+</head>
+<body>
+
+<h1>CSS GRID – FULL DEMO OF ALL KEY CONCEPTS</h1>
+
+<!---------------- FLEXBOX ---------------->
+<h2>1. Flexbox (for comparison)</h2>
+<div class="flex-demo">
+  <div>Box 1</div>
+  <div>Box 2</div>
+  <div>Box 3</div>
+</div>
+
+<!---------------- BASIC GRID ---------------->
+<h2>2. Grid With fr Units, repeat(), tracks, gaps</h2>
+<div class="grid-basic">
+  <div>1fr</div>
+  <div>1fr</div>
+  <div>1fr</div>
+  <div>1fr</div>
+</div>
+
+<!---------------- IMPLICIT GRID ---------------->
+<h2>3. Implicit vs Explicit Grid</h2>
+<p>Only 2 columns defined. Extra items create new implicit rows.</p>
+<div class="grid-implicit">
+  <div>1</div>
+  <div>2</div>
+  <div>3 (implicit)</div>
+  <div>4 (implicit)</div>
+  <div>5 (implicit)</div>
+</div>
+
+<!---------------- MINMAX ---------------->
+<h2>4. minmax() Function</h2>
+<div class="grid-minmax">
+  <div>minmax(150px, 300px)</div>
+  <div>1fr</div>
+</div>
+
+<!---------------- GRID COLUMN/ROW ---------------->
+<h2>5. grid-column / grid-row Positioning</h2>
+<div class="grid-position">
+  <div class="item-big">BIG (spans)</div>
+  <div>2</div> <div>3</div> <div>4</div>
+  <div>5</div> <div>6</div> <div>7</div>
+</div>
+
+<!---------------- GRID TEMPLATE AREAS ---------------->
+<h2>6. grid-template-areas Layout</h2>
+<div class="layout">
+  <div class="header">HEADER</div>
+  <div class="left">LEFT SIDEBAR</div>
+  <div class="main">MAIN CONTENT</div>
+  <div class="right">RIGHT SIDEBAR</div>
+  <div class="footer">FOOTER</div>
+</div>
+
+</body>
+</html>
